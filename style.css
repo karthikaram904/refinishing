@@ -2325,3 +2325,6 @@ body.light-mode .pw-eye-btn { color: var(--text-dim); }
   box-shadow: var(--shadow);
   min-width: 220px;
 }
+body.light-mode .hero-section .hero-title {
+  color: #000 !important;
+}
