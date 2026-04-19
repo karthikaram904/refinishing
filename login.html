@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login — ReGrain Studio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="dark-mode auth-page">
+
+<div class="auth-wrapper">
+  <div class="auth-box">
+    <!-- Logo inside box top -->
+    <div class="auth-logo-wrap">
+      <a href="index.html"><img src="images/refinish.png" alt="ReGrain Studio" class="auth-logo"/></a>
+    </div>
+
+    <h2 class="auth-title">Welcome Back</h2>
+    <p class="auth-sub">Sign in to your studio account</p>
+
+    <div class="social-auth-row">
+      <button class="social-auth-btn" title="Facebook"><i class="fab fa-facebook-f"></i></button>
+      <button class="social-auth-btn" title="Apple"><i class="fab fa-apple"></i></button>
+      <button class="social-auth-btn" title="Twitter/X"><i class="fab fa-x-twitter"></i></button>
+      <button class="social-auth-btn" title="Google"><i class="fab fa-google"></i></button>
+    </div>
+
+    <div class="auth-divider"><span>or continue with email</span></div>
+
+    <div class="mb-3">
+      <label class="auth-label">Email Address</label>
+      <input type="email" class="form-control auth-input" placeholder="you@example.com"/>
+    </div>
+    <div class="mb-3">
+      <label class="auth-label">Password</label>
+      <div class="input-pw-wrap">
+        <input type="password" class="form-control auth-input" id="loginPassword" placeholder="Enter your password"/>
+        <button class="pw-eye-btn" type="button" onclick="togglePassword('loginPassword', this)">
+          <i class="fas fa-eye"></i>
+        </button>
+      </div>
+    </div>
+    <div class="auth-remember-row">
+      <label class="auth-remember">
+        <input type="checkbox"/> Remember me
+      </label>
+      <a href="#" class="auth-forgot">Forgot password?</a>
+    </div>
+
+    <button class="btn btn-primary-custom w-100 mt-4 auth-submit">Sign In</button>
+
+    <p class="auth-switch mt-3">Don't have an account? <a href="register.html">Create one</a></p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

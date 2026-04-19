@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 44" fill="none">
+  <!-- Wood grain icon -->
+  <rect x="2" y="8" width="28" height="28" rx="6" fill="#C8965A"/>
+  <path d="M7 20 Q16 14 25 20 Q16 26 7 20Z" fill="#8B6035" opacity="0.5"/>
+  <path d="M7 24 Q16 18 25 24" stroke="#F0EDE8" stroke-width="1.2" stroke-linecap="round" opacity="0.4"/>
+  <path d="M9 28 Q16 23 23 28" stroke="#F0EDE8" stroke-width="1" stroke-linecap="round" opacity="0.3"/>
+  <!-- Text -->
+  <text x="38" y="26" font-family="Playfair Display, Georgia, serif" font-size="18" font-weight="700" fill="#F0EDE8" letter-spacing="-0.3">ReGrain</text>
+  <text x="38" y="38" font-family="DM Sans, sans-serif" font-size="8.5" font-weight="500" fill="#C8965A" letter-spacing="2.5">STUDIO</text>
+</svg>

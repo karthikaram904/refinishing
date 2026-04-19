@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ReGrain Studio — Furniture Refinishing</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="dark-mode">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/refinish.png" alt="ReGrain Studio" class="nav-logo"/>
+    </a>
+    <button class="navbar-toggler hamburger-btn" type="button" id="hamburgerBtn" aria-label="Toggle navigation">
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+          <ul class="dropdown-menu dark-dropdown">
+            <li><a class="dropdown-item active" href="index.html">Home 1 — Classic</a></li>
+            <li><a class="dropdown-item" href="home2.html">Home 2 — Minimal</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+      </ul>
+      <div class="nav-actions d-flex align-items-center gap-2">
+        <button class="icon-toggle-btn" id="themeToggleBtn" title="Switch to Light Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="icon-toggle-btn rtl-toggle-btn" id="rtlToggleBtn" title="Switch to RTL">
+          <i class="fas fa-align-right"></i>
+          <span class="rtl-label">RTL</span>
+        </button>
+        <a href="login.html" class="btn btn-login">Login</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section" id="home">
+  <div class="hero-bg-grain"></div>
+  <div class="hero-circle c1"></div>
+  <div class="hero-circle c2"></div>
+  <div class="container">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-6 hero-content">
+        <span class="hero-badge">✦ Artisan Furniture Studio</span>
+        <h1 class="hero-title">Give Old <span class="text-accent">Furniture</span> a New Soul</h1>
+        <p class="hero-desc">We transform worn, forgotten pieces into stunning statement furniture. Expert refinishing, color consultation, and before-after magic — all tracked through your personal dashboard.</p>
+        <div class="hero-cta d-flex gap-3 flex-wrap">
+          <a href="#portfolio" class="btn btn-primary-custom">View Portfolio</a>
+          <a href="dashboard.html" class="btn btn-outline-custom">Submit a Piece</a>
+        </div>
+        <div class="hero-stats d-flex gap-4 mt-5">
+          <div class="stat-item"><span class="stat-num">840+</span><span class="stat-label">Pieces Transformed</span></div>
+          <div class="stat-item"><span class="stat-num">12yr</span><span class="stat-label">Experience</span></div>
+          <div class="stat-item"><span class="stat-num">98%</span><span class="stat-label">Client Approval</span></div>
+        </div>
+      </div>
+      <div class="col-lg-6 hero-visual">
+        <div class="before-after-card">
+          <div class="ba-panel before">
+            <span class="ba-label">Before</span>
+            <div class="ba-img before-img">
+              <img src="images/befor1.jpg">
+            </div>
+          </div>
+          <div class="ba-divider"><i class="fas fa-arrows-left-right"></i></div>
+          <div class="ba-panel after">
+            <span class="ba-label">After</span>
+            <div class="ba-img after-img"><img src="images/after.jpg"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-pad" id="about">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <div class="about-img-wrap">
+          <div class="about-img-main">
+            <img src="images/about.jpg">
+          </div>
+          <div class="about-badge-float">
+            <i class="fas fa-award"></i>
+            <span>Award Winning Studio</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <span class="section-eyebrow">About ReGrain</span>
+        <h2 class="section-title">Craftsmanship Meets <span class="text-accent">Creative Vision</span></h2>
+        <p class="section-desc">ReGrain Studio was born from a love of old things and the belief that every piece of furniture holds a story worth continuing. Our artisans blend traditional woodworking techniques with modern design sensibility.</p>
+        <div class="row g-3 mt-3">
+          <div class="col-6">
+            <div class="feature-card"><i class="fas fa-paint-brush"></i><h6>Hand Painted Finishes</h6></div>
+          </div>
+          <div class="col-6">
+            <div class="feature-card"><i class="fas fa-palette"></i><h6>Color Consultation</h6></div>
+          </div>
+          <div class="col-6">
+            <div class="feature-card"><i class="fas fa-tools"></i><h6>Structural Repair</h6></div>
+          </div>
+          <div class="col-6">
+            <div class="feature-card"><i class="fas fa-leaf"></i><h6>Eco-Friendly Paints</h6></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section-pad bg-alt" id="services">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow">What We Do</span>
+      <h2 class="section-title">Our <span class="text-accent">Services</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-spray-can"></i></div>
+          <h5>Full Refinishing</h5>
+          <p>Complete strip-down, repair, and refinishing with your choice of color, texture, and finish.</p>
+          <a href="#pricing" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="service-card featured">
+          <div class="service-badge">Most Popular</div>
+          <div class="service-icon"><i class="fas fa-magic"></i></div>
+          <h5>Color Transformation</h5>
+          <p>Expert color matching and application. Submit your piece, approve the mockup.</p>
+          <a href="#pricing" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-hammer"></i></div>
+          <h5>Structural Restoration</h5>
+          <p>Joinery repair, veneer replacement, upholstery, and hardware upgrades back to life.</p>
+          <a href="#pricing" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-couch"></i></div>
+          <h5>Upholstery Revival</h5>
+          <p>Bespoke fabric selection and expert reupholstering for chairs, sofas, and padded furniture.</p>
+          <a href="#pricing" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section-pad" id="portfolio">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow">Our Work</span>
+      <h2 class="section-title">Before & After <span class="text-accent">Gallery</span></h2>
+    </div>
+    <div class="portfolio-filter d-flex gap-2 justify-content-center mb-4 flex-wrap">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="chairs">Chairs</button>
+      <button class="filter-btn" data-filter="tables">Tables</button>
+      <button class="filter-btn" data-filter="cabinets">Cabinets</button>
+      <button class="filter-btn" data-filter="dressers">Dressers</button>
+    </div>
+    <div class="row g-4" id="portfolioGrid">
+      <div class="col-lg-4 col-md-6 portfolio-item" data-cat="chairs">
+        <div class="portfolio-card">
+          <div class="portfolio-ba">
+            <div class="p-before"><span>Before</span> <img src="images/ch2.jpg"></div>
+            <div class="p-after"><span>After</span><img src="images/ch1.jpg"></div>
+          </div>
+          <div class="portfolio-info"><h6>Victorian Armchair</h6><span>Full Refinish + Reupholster</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item" data-cat="tables">
+        <div class="portfolio-card">
+          <div class="portfolio-ba">
+            <div class="p-before"><span>Before</span><img src="images/cp1.jpg"></div>
+            <div class="p-after alt"><span>After</span><img src="images/cp2.jpg"></div>
+          </div>
+          <div class="portfolio-info"><h6>Oak Dining Table</h6><span>Stain + Lacquer Finish</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item" data-cat="cabinets">
+        <div class="portfolio-card">
+          <div class="portfolio-ba">
+            <div class="p-before"><span>Before</span><img src="images/bs1.jpg"></div>
+            <div class="p-after alt2"><span>After</span><img src="images/bs2.jpg"></div>
+          </div>
+          <div class="portfolio-info"><h6>Art Deco Cabinet</h6><span>Color Transformation</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item" data-cat="dressers">
+        <div class="portfolio-card">
+          <div class="portfolio-ba">
+            <div class="p-before"><span>Before</span><img src="images/b1.jpg"></div>
+            <div class="p-after"><span>After</span><img src="images/b2.jpg"></div>
+          </div>
+          <div class="portfolio-info"><h6>Vintage Dresser</h6><span>Chalk Paint + Wax</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item" data-cat="chairs">
+        <div class="portfolio-card">
+          <div class="portfolio-ba">
+            <div class="p-before"><span>Before</span><img src="images/bef1.jpg"></div>
+            <div class="p-after alt2"><span>After</span><img src="images/bef2.jpg"></div>
+          </div>
+          <div class="portfolio-info"><h6>Rocking Chair</h6><span>Strip + Natural Oil</span></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6 portfolio-item" data-cat="tables">
+        <div class="portfolio-card">
+          <div class="portfolio-ba">
+            <div class="p-before"><span>Before</span><img src="images/r1.jpg"></div>
+            <div class="p-after alt"><span>After</span><img src="images/r2.jpg"></div>
+          </div>
+          <div class="portfolio-info"><h6>Coffee Table</h6><span>Epoxy + Color Pop</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING CALCULATOR -->
+<section class="section-pad bg-alt" id="pricing">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow">Transparent Costs</span>
+      <h2 class="section-title">Pricing <span class="text-accent">Calculator</span></h2>
+    </div>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-6">
+        <div class="calc-card">
+          <h5 class="mb-4"><i class="fas fa-calculator me-2 text-accent"></i>Estimate Your Project</h5>
+          <div class="mb-3">
+            <label class="form-label calc-label">Furniture Type</label>
+            <select class="form-select calc-select" id="furnitureType">
+              <option value="0">Select type...</option>
+              <option value="80">Chair / Stool</option>
+              <option value="150">Coffee Table</option>
+              <option value="220">Dining Table</option>
+              <option value="180">Dresser / Chest</option>
+              <option value="300">Wardrobe / Cabinet</option>
+              <option value="400">Dining Set (4 chairs + table)</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label calc-label">Service Type</label>
+            <select class="form-select calc-select" id="serviceType">
+              <option value="1">Color Transformation</option>
+              <option value="1.3">Full Refinishing</option>
+              <option value="1.5">Structural + Refinishing</option>
+              <option value="1.8">Premium Restoration</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label calc-label">Finish Type</label>
+            <select class="form-select calc-select" id="finishType">
+              <option value="0">Matte / Chalk Paint</option>
+              <option value="30">Satin Lacquer</option>
+              <option value="50">High Gloss</option>
+              <option value="80">Two-Tone / Special Effect</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label class="form-label calc-label">Condition</label>
+            <div class="d-flex gap-3">
+              <label class="condition-chip"><input type="radio" name="condition" value="0" checked/> Good</label>
+              <label class="condition-chip"><input type="radio" name="condition" value="40"/> Fair</label>
+              <label class="condition-chip"><input type="radio" name="condition" value="80"/> Poor</label>
+            </div>
+          </div>
+          <div class="calc-result">
+            <span>Estimated Cost</span>
+            <span class="calc-price" id="calcPrice">₹0</span>
+          </div>
+          <a href="dashboard.html" class="btn btn-primary-custom w-100 mt-3">Submit Your Piece</a>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="pricing-tiers">
+          <div class="tier-card">
+            <h6>Basic</h6>
+            <div class="tier-price">From ₹800</div>
+            <ul>
+              <li><i class="fas fa-check"></i> Single piece</li>
+              <li><i class="fas fa-check"></i> 1 color option</li>
+              <li><i class="fas fa-check"></i> 7–10 days turnaround</li>
+              <li><i class="fas fa-check"></i> Home pickup & delivery</li>
+              
+            </ul>
+          </div>
+          <div class="tier-card active">
+            <h6>Studio</h6>
+            <div class="tier-price">From ₹1,800</div>
+            <ul>
+              <li><i class="fas fa-check"></i> Full refinishing</li>
+              <li><i class="fas fa-check"></i> 3 color mockups</li>
+              <li><i class="fas fa-check"></i> Dashboard tracking</li>
+              <li><i class="fas fa-check"></i> 5–7 days turnaround</li>
+              <li><i class="fas fa-check"></i> Unlimited mockups</li>
+              <li><i class="fas fa-check"></i> Priority queue</li>
+              <li><i class="fas fa-check"></i> Home pickup & delivery</li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section-pad" id="testimonials">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow">Client Stories</span>
+      <h2 class="section-title">What Our <span class="text-accent">Clients Say</span></h2>
+    </div>
+    <div class="row g-4">
+  <div class="col-lg-3 col-md-6">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"My grandmother's dresser looked like garbage — ReGrain turned it into a showpiece. The dashboard made every step."</p>
+      <div class="client-info"><div class="client-avatar">PK</div><div><strong>Priya K.</strong><span>Chennai</span></div></div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="testimonial-card featured">
+      <div class="stars">★★★★★</div>
+      <p>"Approved the color mockup online and the final result was EXACTLY as shown. Absolutely brilliant process and gorgeous work."</p>
+      <div class="client-info"><div class="client-avatar">RM</div><div><strong>Ravi M.</strong><span>Bangalore</span></div></div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"Restored 6 dining chairs from the 70s. Each one tracked through the project dashboard. Delivered on time, stunning results."</p>
+      <div class="client-info"><div class="client-avatar">SL</div><div><strong>Sara L.</strong><span>Mumbai</span></div></div>
+    </div>
+  </div>
+  <div class="col-lg-3 col-md-6">
+    <div class="testimonial-card">
+      <div class="stars">★★★★★</div>
+      <p>"Teak wardrobe completely transformed. The colour consultation was spot on and delivery was handled."</p>
+      <div class="client-info"><div class="client-avatar">AN</div><div><strong>Arjun N.</strong><span>Chennai</span></div></div>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section-pad bg-alt" id="contact">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5">
+        <span class="section-eyebrow">Get In Touch</span>
+        <h2 class="section-title">Start Your <span class="text-accent">Project</span></h2>
+        <p class="section-desc mb-4">Have a piece in mind? Reach out and our team will guide you through the process.</p>
+        <div class="contact-info-list">
+          <div class="contact-info-item"><i class="fas fa-map-marker-alt"></i><span>12, Crafts Lane, T.Nagar, Chennai</span></div>
+          <div class="contact-info-item"><i class="fas fa-phone"></i><span>+91 98400 00000</span></div>
+          <div class="contact-info-item"><i class="fas fa-envelope"></i><span>hello@regrainstudio.in</span></div>
+        </div>
+        <div class="social-links mt-4">
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="contact-form-card">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <input type="text" class="form-control custom-input" placeholder="Your Name"/>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control custom-input" placeholder="Email Address"/>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" class="form-control custom-input" placeholder="Phone Number"/>
+            </div>
+            <div class="col-md-6">
+              <select class="form-select custom-input">
+                <option>Select Service</option>
+                <option>Color Transformation</option>
+                <option>Full Refinishing</option>
+                <option>Structural Restoration</option>
+                <option>Premium Package</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <textarea class="form-control custom-input" rows="4" placeholder="Describe your furniture piece and what you'd like done..."></textarea>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary-custom w-100">Send Message <i class="fas fa-arrow-right ms-2"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a href="index.html"><img src="images/refinish.png" alt="ReGrain" class="footer-logo"/></a>
+        <p class="footer-desc mt-3">Artisan furniture refinishing studio. Breathing new life into beloved pieces since 2012.</p>
+        <div class="social-links mt-3">
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-heading">Pages</h6>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-heading">Client</h6>
+        <ul class="footer-links">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="#">Details</a></li>
+          <li><a href="#">Home2</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="footer-heading">Newsletter</h6>
+        <p class="footer-desc">Get before-after inspirations in your inbox.</p>
+        <div class="newsletter-form d-flex gap-2 mt-2">
+          <input type="email" class="form-control custom-input" placeholder="Your email"/>
+          <button class="btn btn-primary-custom px-3">Go</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ReGrain Studio. All rights reserved.</span>
+      <span>Crafted with ♥ in Chennai</span>
+    </div>
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script type="text/javascript">
+  const heroStatsObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      document.querySelectorAll('.stat-num').forEach(el => {
+        const full = el.textContent.trim();
+        const suffix = full.replace(/[0-9]/g, ''); // +, yr, % etc
+        const target = parseInt(full.replace(/[^0-9]/g, ''));
+
+        let start = 0;
+        const step = 16;
+        const increment = target / (2000 / step);
+
+        const timer = setInterval(() => {
+          start += increment;
+          if (start >= target) {
+            start = target;
+            clearInterval(timer);
+          }
+          el.textContent = Math.floor(start) + suffix;
+        }, step);
+      });
+      heroStatsObserver.disconnect();
+    }
+  });
+}, { threshold: 0.5 });
+
+const heroStats = document.querySelector('.hero-stats');
+if (heroStats) heroStatsObserver.observe(heroStats);
+</script>
+</body>
+</html>
