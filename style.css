@@ -1509,6 +1509,9 @@ body.light-mode .contact-info-card { background: #fff; }
   [dir="rtl"] .dashboard-sidebar { transform: translateX(100%); }
   [dir="rtl"] .dashboard-sidebar.open { transform: translateX(0); }
   [dir="rtl"] .dashboard-main { margin-right: 0 !important; }
+   .dashboard-main {
+   overflow-x: hidden;
+  }
 }
 .nav-logo { height: 68px; width: auto; }
 .hero2-section::before {
