@@ -619,6 +619,9 @@ background: transparent;
                           .pcf-before, .pcf-after {
     min-height: 460px !important;
   }
+                           .dash-topbar-title {
+  font-size: 0.78rem !important;
+}
                           }
 .newsletter-form .form-control { flex: 1; }
 
