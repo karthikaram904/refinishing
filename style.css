@@ -2240,6 +2240,10 @@ body.light-mode .pw-eye-btn { color: var(--text-dim); }
     flex: 0 0 100%;
     max-width: 100%;
   }
+   .last-col
+   {
+    flex: 0 0 100% !important;  
+   }
 
   /* Work grid right 2x2 → stacked */
   .work-small-card { min-height: 200px; height: 200px; }
