@@ -1521,6 +1521,10 @@ body.light-mode .contact-info-card { background: #fff; }
 
 @media (min-width: 1024px) {
   [dir="rtl"] .dashboard-sidebar { transform: translateX(0); }
+   .last-col
+   {
+    flex: 0 0 100% !important;  
+   }
 }
 @media (max-width: 1023px) {
   [dir="rtl"] .dashboard-sidebar { transform: translateX(100%); }
@@ -2241,10 +2245,7 @@ body.light-mode .pw-eye-btn { color: var(--text-dim); }
     flex: 0 0 100%;
     max-width: 100%;
   }
-   .last-col
-   {
-    flex: 0 0 100% !important;  
-   }
+   
 
   /* Work grid right 2x2 → stacked */
   .work-small-card { min-height: 200px; height: 200px; }
