@@ -67,7 +67,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
 {
   height: 74px;
 }
-body.light-mode .ba-panel span {
+body.light-mode .ba-panel span,body.light-mode .portfolio-ba span {
   color: #fff !important;
 }
 body.light-mode .nav-logo,body.light-mode .sidebar-logo img, body.light-mode .footer-logo,body.light-mode .auth-logo {
