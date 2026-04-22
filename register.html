@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register — ReGrain Studio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="dark-mode auth-page">
+
+<div class="auth-wrapper">
+  <div class="auth-box">
+    <div class="auth-logo-wrap">
+      <a href="index.html"><img src="images/refinish.png" alt="ReGrain Studio" class="auth-logo"/></a>
+    </div>
+
+    <h2 class="auth-title">Create Account</h2>
+    <p class="auth-sub">Join the ReGrain Studio community</p>
+
+    <div class="social-auth-row">
+      <button class="social-auth-btn" title="Facebook"><i class="fab fa-facebook-f"></i></button>
+      <button class="social-auth-btn" title="Apple"><i class="fab fa-apple"></i></button>
+      <button class="social-auth-btn" title="Twitter/X"><i class="fab fa-x-twitter"></i></button>
+      <button class="social-auth-btn" title="Google"><i class="fab fa-google"></i></button>
+    </div>
+
+    <div class="auth-divider"><span>or register with email</span></div>
+
+    <div class="row g-3">
+      <div class="col-6">
+        <label class="auth-label">First Name</label>
+        <input type="text" class="form-control auth-input" placeholder="First name"/>
+      </div>
+      <div class="col-6">
+        <label class="auth-label">Last Name</label>
+        <input type="text" class="form-control auth-input" placeholder="Last name"/>
+      </div>
+      <div class="col-12">
+        <label class="auth-label">Email Address</label>
+        <input type="email" class="form-control auth-input" placeholder="you@example.com"/>
+      </div>
+      <div class="col-12">
+        <label class="auth-label">Phone Number</label>
+        <input type="tel" class="form-control auth-input" placeholder="+91 00000 00000"/>
+      </div>
+      <div class="col-12">
+        <label class="auth-label">Password</label>
+        <div class="input-pw-wrap">
+          <input type="password" class="form-control auth-input" id="regPassword" placeholder="Create a strong password"/>
+          <button class="pw-eye-btn" type="button" onclick="togglePassword('regPassword', this)">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+      </div>
+      <div class="col-12">
+        <label class="auth-label">Confirm Password</label>
+        <div class="input-pw-wrap">
+          <input type="password" class="form-control auth-input" id="regPassword2" placeholder="Repeat password"/>
+          <button class="pw-eye-btn" type="button" onclick="togglePassword('regPassword2', this)">
+            <i class="fas fa-eye"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth-remember-row mt-3" style="justify-content:flex-start;">
+      <label class="auth-remember">
+        <input type="checkbox"/> I agree to the <a href="#" class="text-accent">Terms &amp; Privacy Policy</a>
+      </label>
+    </div>
+
+    <button class="btn btn-primary-custom w-100 mt-3 auth-submit">Create Account</button>
+
+    <p class="auth-switch mt-3">Already have an account? <a href="login.html">Sign in</a></p>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

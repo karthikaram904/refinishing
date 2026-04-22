@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Client Dashboard — ReGrain Studio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="dark-mode dashboard-page">
+
+<!-- SIDEBAR OVERLAY -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- SIDEBAR -->
+<aside class="dashboard-sidebar" id="dashSidebar">
+  <div class="sidebar-logo">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/refinish.png" alt="ReGrain Studio" class="nav-logo"/>
+    </a>
+    <button class="sidebar-close" id="sidebarClose"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="sidebar-user">
+    <div class="sidebar-avatar">PK</div>
+    <div>
+      <div class="sidebar-username">Priya Kumar</div>
+      <div class="sidebar-email">priya@example.com</div>
+    </div>
+  </div>
+  <nav class="sidebar-nav">
+    <a href="#" class="sidebar-link active" data-tab="overview">
+      <i class="fas fa-home"></i><span>Overview</span>
+    </a>
+    <a href="#" class="sidebar-link" data-tab="submit">
+      <i class="fas fa-plus-circle"></i><span>Submit a Piece</span>
+    </a>
+    <a href="#" class="sidebar-link" data-tab="projects">
+      <i class="fas fa-tasks"></i><span>My Projects</span>
+      <span class="sidebar-badge">3</span>
+    </a>
+    
+    <a href="#" class="sidebar-link" data-tab="gallery">
+      <i class="fas fa-images"></i><span>Before & After</span>
+    </a>
+    <a href="#" class="sidebar-link" data-tab="invoices">
+      <i class="fas fa-file-invoice"></i><span>Invoices</span>
+    </a>
+    <a href="#" class="sidebar-link" data-tab="messages">
+      <i class="fas fa-comments"></i><span>Messages</span>
+      <span class="sidebar-badge">2</span>
+    </a>
+    <div class="sidebar-divider"></div>
+    <a href="#" class="sidebar-link" data-tab="settings">
+      <i class="fas fa-cog"></i><span>Settings</span>
+    </a>
+    <a href="login.html" class="sidebar-link logout">
+      <i class="fas fa-sign-out-alt"></i><span>Logout</span>
+    </a>
+  </nav>
+</aside>
+
+<!-- DASHBOARD MAIN -->
+<div class="dashboard-main" id="dashMain">
+  <!-- TOP BAR -->
+  <div class="dash-topbar">
+    <button class="dash-hamburger" id="dashHamburger">
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+    </button>
+    <div class="dash-topbar-title" id="dashTitle">Overview</div>
+    <div class="dash-topbar-right">
+      <button class="icon-toggle-btn" id="themeToggleBtn" title="Switch to Light Mode"><i class="fas fa-moon"></i></button>
+      <button class="icon-toggle-btn rtl-toggle-btn" id="rtlToggleBtn" title="Switch to RTL"><i class="fas fa-align-right"></i><span class="rtl-label">RTL</span></button>
+      <button class="dash-notif"><i class="fas fa-bell"></i><span class="notif-dot"></span></button>
+      <div class="dash-avatar-sm">PK</div>
+    </div>
+  </div>
+
+  <!-- CONTENT AREA -->
+  <div class="dash-content" id="dashContent">
+
+    <!-- OVERVIEW TAB -->
+    <div class="tab-pane active" id="tab-overview">
+      <div class="dash-welcome">
+        <div>
+          <h3 class="dash-greeting">Good morning, Priya ✦</h3>
+          <p>Here's the status of your furniture projects</p>
+        </div>
+        <a href="#" class="btn btn-primary-custom" data-tab-link="submit">+ Submit New Piece</a>
+      </div>
+      <div class="row g-3 mb-4">
+        <div class="col-xl-3 col-md-6">
+          <div class="stat-widget"><div class="sw-icon bg-accent"><i class="fas fa-couch"></i></div><div><div class="sw-num">3</div><div class="sw-label">Active Projects</div></div></div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="stat-widget"><div class="sw-icon bg-green"><i class="fas fa-check-circle"></i></div><div><div class="sw-num">7</div><div class="sw-label">Completed</div></div></div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="stat-widget"><div class="sw-icon bg-blue"><i class="fas fa-palette"></i></div><div><div class="sw-num">2</div><div class="sw-label">Awaiting Approval</div></div></div>
+        </div>
+        <div class="col-xl-3 col-md-6">
+          <div class="stat-widget"><div class="sw-icon bg-orange"><i class="fas fa-star"></i></div><div><div class="sw-num">4.9</div><div class="sw-label">Avg. Rating</div></div></div>
+        </div>
+      </div>
+
+      <!-- Active Projects -->
+      <h5 class="dash-section-title mb-3">Active Projects</h5>
+      <div class="row g-3 mb-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card">
+            <div class="project-img pi1"><img src="images/cp2.jpg" alt="Workshop"></div>
+            <div class="project-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <h6>Victorian Armchair</h6>
+                <span class="project-status in-progress">In Progress</span>
+              </div>
+              <p>Full refinish + reupholster in sage green</p>
+              <div class="project-progress">
+                <div class="progress-bar-custom" style="width:65%"></div>
+              </div>
+              <small>Step 3 of 5 — Painting & Finishing</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="project-card">
+            <div class="project-img pi2"><img src="images/bs2.jpg" alt="Workshop"></div>
+            <div class="project-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <h6>Oak Coffee Table</h6>
+                <span class="project-status awaiting">Awaiting Approval</span>
+              </div>
+              <p>Epoxy resin pour with dark walnut stain</p>
+              <div class="project-progress">
+                <div class="progress-bar-custom" style="width:30%"></div>
+              </div>
+              <small>Step 2 of 5 — Color Mockup Ready</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 last-col">
+          <div class="project-card">
+            <div class="project-img pi3"><img src="images/bc2.jpg" alt="Workshop"></div>
+            <div class="project-body">
+              <div class="d-flex justify-content-between align-items-start">
+                <h6>Art Deco Cabinet</h6>
+                <span class="project-status review">In Review</span>
+              </div>
+              <p>Midnight navy with gold hardware</p>
+              <div class="project-progress">
+                <div class="progress-bar-custom" style="width:90%"></div>
+              </div>
+              <small>Step 5 of 5 — Final Quality Check</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mockup Approval -->
+      <h5 class="dash-section-title mb-3">Mockups Awaiting Your Approval</h5>
+      <div class="mockup-approval-card">
+        <div class="mockup-pair">
+          <div class="mockup-img before-mock"><span class="mock-label">Before</span><img src="images/b1.jpg" alt="Workshop"></div>
+          <div class="mockup-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="mockup-img after-mock"><span class="mock-label">Proposed After</span><img src="images/b2.jpg" alt="Workshop"></div>
+        </div>
+        <div class="mockup-info">
+          <h6>Oak Coffee Table — Option A</h6>
+          <p>Dark walnut stain with epoxy resin pour in amber. Hairpin legs in matte black.</p>
+          <div class="d-flex gap-2 flex-wrap">
+            <button class="btn btn-primary-custom btn-sm">Approve ✓</button>
+            <button class="btn btn-outline-custom btn-sm">Request Changes</button>
+            <button class="btn btn-outline-custom btn-sm">View Option B</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBMIT TAB -->
+    <div class="tab-pane" id="tab-submit">
+      <h3 class="dash-greeting">Submit a New Piece</h3>
+      <p class="mb-4">Tell us about your furniture and we'll get back with a quote within 24 hours.</p>
+      <div class="submit-form-card">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="auth-label">Furniture Name</label>
+            <input type="text" class="form-control auth-input" placeholder="e.g. Grandmother's Dresser"/>
+          </div>
+          <div class="col-md-6">
+            <label class="auth-label">Furniture Type</label>
+            <select class="form-select auth-input">
+              <option>Select type...</option>
+              <option>Chair / Armchair</option>
+              <option>Table</option>
+              <option>Cabinet / Wardrobe</option>
+              <option>Dresser / Chest</option>
+              <option>Sofa / Bench</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="auth-label">Service Required</label>
+            <select class="form-select auth-input">
+              <option>Color Transformation</option>
+              <option>Full Refinishing</option>
+              <option>Structural + Refinishing</option>
+              <option>Premium Restoration</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="auth-label">Current Condition</label>
+            <select class="form-select auth-input">
+              <option>Good — minor touch-ups</option>
+              <option>Fair — needs work</option>
+              <option>Poor — major repair needed</option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label class="auth-label">Color / Style Preferences</label>
+            <textarea class="form-control auth-input" rows="3" placeholder="Describe your ideal finish, color scheme, or inspiration..."></textarea>
+          </div>
+          <div class="col-12">
+            <label class="auth-label">Upload Photos (Before)</label>
+            <div class="upload-zone" id="uploadZone">
+              <i class="fas fa-cloud-upload-alt"></i>
+              <p>Drag & drop photos or <span>browse</span></p>
+              <small>JPG, PNG up to 10MB each</small>
+              <input type="file" multiple accept="image/*" hidden id="fileInput"/>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary-custom w-100">Submit for Quote</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECTS TAB -->
+    <div class="tab-pane" id="tab-projects">
+      <h3 class="dash-greeting mb-4">My Projects</h3>
+      <div class="projects-table-wrap">
+        <table class="table dash-table">
+          <thead>
+            <tr><th>Piece</th><th>Service</th><th>Status</th><th>Progress</th><th>Due</th><th></th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Victorian Armchair</strong></td>
+              <td>Full Refinish</td>
+              <td><span class="project-status in-progress">In Progress</span></td>
+              <td><div class="mini-progress"><div style="width:65%"></div></div></td>
+              <td>Apr 28</td>
+              <td><button class="btn btn-outline-custom btn-sm">View</button></td>
+            </tr>
+            <tr>
+              <td><strong>Oak Coffee Table</strong></td>
+              <td>Epoxy + Stain</td>
+              <td><span class="project-status awaiting">Awaiting Approval</span></td>
+              <td><div class="mini-progress"><div style="width:30%"></div></div></td>
+              <td>May 5</td>
+              <td><button class="btn btn-primary-custom btn-sm">Approve</button></td>
+            </tr>
+            <tr>
+              <td><strong>Art Deco Cabinet</strong></td>
+              <td>Premium Restore</td>
+              <td><span class="project-status review">Quality Check</span></td>
+              <td><div class="mini-progress"><div style="width:90%"></div></div></td>
+              <td>Apr 22</td>
+              <td><button class="btn btn-outline-custom btn-sm">View</button></td>
+            </tr>
+            <tr>
+              <td><strong>Teak Side Table</strong></td>
+              <td>Color Transform</td>
+              <td><span class="project-status done">Completed</span></td>
+              <td><div class="mini-progress"><div style="width:100%"></div></div></td>
+              <td>Apr 10</td>
+              <td><button class="btn btn-outline-custom btn-sm">Gallery</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- MOCKUPS TAB -->
+    
+
+    <!-- GALLERY TAB -->
+    <div class="tab-pane" id="tab-gallery">
+      <h3 class="dash-greeting mb-4">Before & After Gallery</h3>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="gallery-ba-card">
+            <div class="gba-panels">
+              <div class="gba-before"><span>Before</span><img src="images/s1.jpg" alt="Workshop"></div>
+              <div class="gba-after"><span>After</span><img src="images/s2.jpg" alt="Workshop"></div>
+            </div>
+            <div class="gba-info"><strong>Teak Side Table</strong><span>Completed Apr 10, 2025</span></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="gallery-ba-card">
+            <div class="gba-panels">
+              <div class="gba-before b2"><span>Before</span><img src="images/o1.jpg" alt="Workshop"></div>
+              <div class="gba-after a2"><span>After</span><img src="images/o2.jpg" alt="Workshop"></div>
+            </div>
+            <div class="gba-info"><strong>Rocking Chair</strong><span>Completed Mar 22, 2025</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INVOICES TAB -->
+    <div class="tab-pane" id="tab-invoices">
+      <h3 class="dash-greeting mb-4">Invoices</h3>
+      <div class="projects-table-wrap">
+        <table class="table dash-table">
+          <thead><tr><th>Invoice</th><th>Project</th><th>Amount</th><th>Date</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <tr><td>#INV-001</td><td>Teak Side Table</td><td>₹1,200</td><td>Apr 10</td><td><span class="project-status done">Paid</span></td><td><button class="btn btn-outline-custom btn-sm">Download</button></td></tr>
+            <tr><td>#INV-002</td><td>Rocking Chair</td><td>₹950</td><td>Mar 22</td><td><span class="project-status done">Paid</span></td><td><button class="btn btn-outline-custom btn-sm">Download</button></td></tr>
+            <tr><td>#INV-003</td><td>Art Deco Cabinet</td><td>₹3,800</td><td>Apr 15</td><td><span class="project-status awaiting">Pending</span></td><td><button class="btn btn-primary-custom btn-sm">Pay Now</button></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- MESSAGES TAB -->
+    <div class="tab-pane" id="tab-messages">
+      <h3 class="dash-greeting mb-4">Messages</h3>
+      <div class="messages-wrap">
+        <div class="msg-item unread">
+          <div class="msg-avatar">RG</div>
+          <div class="msg-body">
+            <div class="d-flex justify-content-between"><strong>ReGrain Studio</strong><small>2 hrs ago</small></div>
+            <p>Your Oak Coffee Table mockups are ready for review! Please check the Design Mockups section.</p>
+          </div>
+        </div>
+        <div class="msg-item unread">
+          <div class="msg-avatar">RG</div>
+          <div class="msg-body">
+            <div class="d-flex justify-content-between"><strong>ReGrain Studio</strong><small>1 day ago</small></div>
+            <p>We've received your Victorian Armchair. Inspection complete, starting work tomorrow.</p>
+          </div>
+        </div>
+        <div class="msg-item">
+          <div class="msg-avatar">RG</div>
+          <div class="msg-body">
+            <div class="d-flex justify-content-between"><strong>ReGrain Studio</strong><small>Apr 10</small></div>
+            <p>Your Teak Side Table has been completed and is ready for pickup or delivery.</p>
+          </div>
+        </div>
+        <div class="msg-compose">
+          <input type="text" class="form-control auth-input" placeholder="Type a message..."/>
+          <button class="btn btn-primary-custom">Send</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- SETTINGS TAB -->
+    <div class="tab-pane" id="tab-settings">
+      <h3 class="dash-greeting mb-4">Account Settings</h3>
+      <div class="submit-form-card">
+        <div class="row g-3">
+          <div class="col-md-6"><label class="auth-label">First Name</label><input class="form-control auth-input" value="Priya"/></div>
+          <div class="col-md-6"><label class="auth-label">Last Name</label><input class="form-control auth-input" value="Kumar"/></div>
+          <div class="col-md-6"><label class="auth-label">Email</label><input class="form-control auth-input" value="priya@example.com"/></div>
+          <div class="col-md-6"><label class="auth-label">Phone</label><input class="form-control auth-input" value="+91 98400 12345"/></div>
+          <div class="col-12"><label class="auth-label">Address</label><textarea class="form-control auth-input" rows="2">12, MG Road, Chennai 600001</textarea></div>
+          <div class="col-12"><button class="btn btn-primary-custom">Save Changes</button></div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /dash-content -->
+</div><!-- /dashboard-main -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<button class="scroll-top-btn" id="scrollTopBtn" title="Scroll to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+</body>
+</html>

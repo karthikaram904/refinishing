@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Service Detail — ReGrain Studio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="pages.css"/>
+</head>
+<body class="dark-mode">
+
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" href="index.html">
+       <img src="images/refinish.png" alt="ReGrain Studio" class="nav-logo"/>
+    </a>
+    <button class="navbar-toggler hamburger-btn" type="button" id="hamburgerBtn" aria-label="Toggle navigation">
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+          <ul class="dropdown-menu dark-dropdown">
+            <li><a class="dropdown-item" href="index.html">Home 1 — Classic</a></li>
+            <li><a class="dropdown-item" href="home2.html">Home 2 — Minimal</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item active"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+      </ul>
+      <div class="nav-actions d-flex align-items-center gap-2">
+        <button class="icon-toggle-btn" id="themeToggleBtn" title="Switch to Light Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="icon-toggle-btn rtl-toggle-btn" id="rtlToggleBtn" title="Switch to RTL">
+          <i class="fas fa-align-right"></i>
+          <span class="rtl-label">RTL</span>
+        </button>
+        <a href="login.html" class="btn btn-login">Login</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- DYNAMIC HERO (changes by service) -->
+<section class="page-hero sd-hero" id="sdHero">
+  <div class="page-hero-grain"></div>
+  <div class="page-hero-glow" style="left:20%;top:-100px;"></div>
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <a href="services.html">Services</a> <i class="fas fa-chevron-right"></i> <span id="sdBreadcrumb">Service Detail</span></div>
+      <div class="sd-hero-tag" id="sdTag">Service</div>
+      <h1 class="page-hero-title" id="sdTitle">Service <span class="text-accent">Name</span></h1>
+      <p class="page-hero-desc" id="sdDesc">Loading service details...</p>
+      <div class="sd-hero-meta" id="sdMeta"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- MAIN CONTENT -->
+<section class="section-pad">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- MAIN -->
+      <div class="col-lg-8">
+
+        <!-- Before/After showcase -->
+        <div class="sd-ba-showcase mb-5">
+          <div class="sd-before"><span class="sd-ba-label">After</span><img src="images/s2.jpg"></div>
+          <div class="sd-after-overlay"><img src="images/s1.jpg">
+            
+            <div class="sd-ba-slider" id="sdSlider"></div>
+          </div>
+          
+        </div>
+
+        <!-- Description -->
+        <div class="sd-description mb-5" id="sdDescription">
+          <h3 class="mb-3">About This <span class="text-accent">Service</span></h3>
+          <div id="sdDescText"></div>
+        </div>
+
+        <!-- Process steps -->
+        <div class="sd-process mb-5" id="sdProcessWrap">
+          <h3 class="mb-4">Our <span class="text-accent">Process</span></h3>
+          <div class="sd-process-list" id="sdProcessList"></div>
+        </div>
+
+        <!-- Gallery -->
+        <div class="sd-gallery mb-5">
+          <h3 class="mb-4">Project <span class="text-accent">Examples</span></h3>
+          <div class="row g-3">
+            <div class="col-4"><div class="sd-gallery-img sgi1"><img src="images/before-after13.jpg"></div></div>
+            <div class="col-4"><div class="sd-gallery-img sgi2"><img src="images/before-after14.jpg"></div></div>
+            <div class="col-4"><div class="sd-gallery-img sgi3"><img src="images/before-after15.jpg"></div></div>
+            <div class="col-6"><div class="sd-gallery-img sgi4"><img src="images/cp2.jpg"></div></div>
+            <div class="col-6"><div class="sd-gallery-img sgi5"><img src="images/bc1.jpg"></div></div>
+          </div>
+        </div>
+
+        <!-- Testimonials for this service -->
+        <div class="sd-testimonials">
+          <h3 class="mb-4">What Clients <span class="text-accent">Say</span></h3>
+          <div class="row g-3" id="sdTestimonials"></div>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="col-lg-4">
+        <div class="sd-sidebar">
+
+          <!-- Price card -->
+          <div class="sd-price-card mb-4" id="sdPriceCard">
+            <div class="sd-pc-label">Starting from</div>
+            <div class="sd-pc-price" id="sdPrice">₹800</div>
+            <div class="sd-pc-note">Final price confirmed after inspection</div>
+            <a href="dashboard.html" class="btn btn-primary-custom w-100 mt-3">Submit a Piece</a>
+            <a href="contact.html" class="btn btn-outline-custom w-100 mt-2">Request a Quote</a>
+          </div>
+
+          <!-- What's included -->
+          <div class="sd-includes-card mb-4" id="sdIncludesCard">
+            <h6>What's Included</h6>
+            <ul id="sdIncludesList"></ul>
+          </div>
+
+          <!-- Turnaround -->
+          <div class="sd-meta-card mb-4" id="sdMetaCard">
+            <div class="smc-item"><i class="fas fa-clock text-accent"></i><div><strong>Turnaround</strong><span id="sdTurnaround">5–10 working days</span></div></div>
+            <div class="smc-item"><i class="fas fa-shield-alt text-accent"></i><div><strong>Warranty</strong><span id="sdWarranty">6 months</span></div></div>
+            <div class="smc-item"><i class="fas fa-leaf text-accent"></i><div><strong>Eco-Friendly</strong><span>Low-VOC paints only</span></div></div>
+            <div class="smc-item"><i class="fas fa-eye text-accent"></i><div><strong>Approval</strong><span>Mockup before work begins</span></div></div>
+          </div>
+
+          <!-- Other services -->
+          <div class="sd-other-services">
+            <h6 class="mb-3">Other Services</h6>
+            <div id="sdOtherServices"></div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- RELATED PORTFOLIO -->
+<section class="section-pad bg-alt">
+  <div class="container">
+    <div class="text-center mb-4">
+      <span class="section-eyebrow">Related Work</span>
+      <h2 class="section-title">Similar <span class="text-accent">Projects</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-card-full">
+          <div class="pcf2-imgs"><div class="pcf2-before"><span>Before</span><img src="images/s1.jpg"></div><div class="pcf2-after g1"><span>After</span><img src="images/s2.jpg"></div></div>
+          <div class="pcf2-body"><div class="pcf2-tag" id="relTag1">Related Service</div><h6>Victorian Armchair</h6><p>Deep burgundy velvet with walnut frame.</p><div class="pcf2-footer"><span>Chairs</span><span>8 days</span></div></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-card-full">
+          <div class="pcf2-imgs"><div class="pcf2-before"><span>Before</span><img src="images/bc1.jpg"></div><div class="pcf2-after g3"><span>After</span><img src="images/bc2.jpg"></div></div>
+          <div class="pcf2-body"><div class="pcf2-tag" id="relTag2">Related Service</div><h6>Vintage Dresser</h6><p>Sage green chalk paint with brass hardware.</p><div class="pcf2-footer"><span>Dressers</span><span>6 days</span></div></div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="portfolio-card-full">
+          <div class="pcf2-imgs"><div class="pcf2-before"><span>Before</span><img src="images/bef1.jpg"></div><div class="pcf2-after g6"><span>After</span><img src="images/bef2.jpg"></div></div>
+          <div class="pcf2-body"><div class="pcf2-tag" id="relTag3">Related Service</div><h6>Coffee Table</h6><p>Live-edge with amber resin pour.</p><div class="pcf2-footer"><span>Tables</span><span>9 days</span></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4"><a href="portfolio.html" class="btn btn-outline-custom">View Full Portfolio</a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta-section">
+  <div class="container text-center">
+    <h2>Ready to Get Started?</h2>
+    <p>Submit your piece today and receive a free no-obligation quote within 24 hours.</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+      <a href="dashboard.html" class="btn btn-primary-custom btn-lg">Submit a Piece</a>
+      <a href="pricing.html" class="btn btn-outline-custom btn-lg">View Pricing</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a href="index.html"><img src="images/refinish.png" alt="ReGrain" class="footer-logo"/></a>
+        <p class="footer-desc mt-3">Artisan furniture refinishing studio. Breathing new life into beloved pieces since 2012.</p>
+        <div class="social-links mt-3">
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-heading">Pages</h6>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-heading">Client</h6>
+        <ul class="footer-links">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="#">Details</a></li>
+          <li><a href="#">Home2</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="footer-heading">Newsletter</h6>
+        <p class="footer-desc">Get before-after inspirations in your inbox.</p>
+        <div class="newsletter-form d-flex gap-2 mt-2">
+          <input type="email" class="form-control custom-input" placeholder="Your email"/>
+          <button class="btn btn-primary-custom px-3">Go</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ReGrain Studio. All rights reserved.</span>
+      <span>Crafted with ♥ in Chennai</span>
+    </div>
+  </div>
+</footer>
+<button class="scroll-top-btn" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script src="pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us — ReGrain Studio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="pages.css"/>
+</head>
+<body class="dark-mode">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+  <div class="container-fluid px-4">
+    <a class="navbar-brand" href="index.html">
+       <img src="images/refinish.png" alt="ReGrain Studio" class="nav-logo"/>
+    </a>
+    <button class="navbar-toggler hamburger-btn" type="button" id="hamburgerBtn" aria-label="Toggle navigation">
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+      <span class="ham-line"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Home</a>
+          <ul class="dropdown-menu dark-dropdown">
+            <li><a class="dropdown-item" href="index.html">Home 1 — Classic</a></li>
+            <li><a class="dropdown-item" href="home2.html">Home 2 — Minimal</a></li>
+          </ul>
+        </li>
+        <li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item"><a class="nav-link" href="dashboard.html">Dashboard</a></li>
+      </ul>
+      <div class="nav-actions d-flex align-items-center gap-2">
+        <button class="icon-toggle-btn" id="themeToggleBtn" title="Switch to Light Mode">
+          <i class="fas fa-moon"></i>
+        </button>
+        <button class="icon-toggle-btn rtl-toggle-btn" id="rtlToggleBtn" title="Switch to RTL">
+          <i class="fas fa-align-right"></i>
+          <span class="rtl-label">RTL</span>
+        </button>
+        <a href="login.html" class="btn btn-login">Login</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+
+<section class="page-hero">
+  <div class="page-hero-grain"></div>
+  <div class="page-hero-glow" style="left:20%;top:-100px;"></div>
+  <div class="container">
+    <div class="page-hero-inner">
+      <div class="page-breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right"></i> <span>About</span></div>
+      <h1 class="page-hero-title">Our <span class="text-accent">Story</span></h1>
+      <p class="page-hero-desc">From a quick colour refresh to a full structural restoration — every service is delivered with artisan precision and complete transparency.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STORY SECTION -->
+<section class="section-pad about-page-sec">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <div class="about-story-img-wrap">
+          <div class="story-img-main"><img src="images/about-us1.jpg"></div>
+          <div class="story-img-accent"><img src="images/about-us.webp"></div>
+          <div class="story-year-badge"><span class="year-num">2012</span><span class="year-label">Founded</span></div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <span class="section-eyebrow">How It Began</span>
+        <h2 class="section-title">Born from a Love of <span class="text-accent">Old Things</span></h2>
+        <p class="section-desc mb-3">ReGrain Studio began when founder Arjun Nair rescued a battered 1940s teak sideboard from a roadside pile in Mylapore.Quality-checked, photographed, and delivered — with a full before-after gallery. What started as a personal weekend project grew into an obsession — and then a calling.</p>
+        <p style="color:var(--text-muted);font-size:1rem;line-height:1.8;">Today, our 8-person team operates from a 3,000 sq ft studio in T.Nagar, Chennai. Furniture holds memories. We treat every piece with the same respect we'd give a family honest heirloom. Every piece that comes through our doors is treated as a unique artefact with its own character, history, and potential. We believe that sustainable furniture begins with not throwing things away.</p>
+        <div class="story-signature mt-4">
+          <div class="signature-img"><img src="images/testimonial-3.jpg"></div>
+          <div><strong>Arjun Nair</strong><span style="display:block;font-size:0.82rem;color:var(--text-muted)">Founder & Master Craftsman</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NUMBERS BAND -->
+<section class="numbers-band">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-6 col-lg-3">
+        <div class="number-item"><span class="big-num">840<span class="text-accent">+</span></span><span class="num-label">Pieces Transformed</span></div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="number-item"><span class="big-num">12<span class="text-accent">yr</span></span><span class="num-label">In Business</span></div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="number-item"><span class="big-num">98<span class="text-accent">%</span></span><span class="num-label">Client Satisfaction</span></div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="number-item"><span class="big-num">8<span class="text-accent"></span></span><span class="num-label">Skilled Artisans</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section-pad bg-alt">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow">What Drives Us</span>
+      <h2 class="section-title">Our Core <span class="text-accent">Values</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-leaf"></i></div>
+          <h5>Sustainability</h5>
+          <p>Every piece we restore is one less item in a landfill. We use low-VOC, eco-certified paints and finishes.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-hand-sparkles"></i></div>
+          <h5>Craftsmanship</h5>
+          <p>No shortcuts. Every surface is hand-sanded, every coat is inspected. Quality is non-negotiable in our studio.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-eye"></i></div>
+          <h5>Transparency</h5>
+          <p>Our client dashboard lets you see every step of your project. No surprises — just clear, honest communication.</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="value-card">
+          <div class="value-icon"><i class="fas fa-heart"></i></div>
+          <h5>Care</h5>
+          <p>Furniture holds memories. We treat every piece with the same respect we'd give a family honest heirloom.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section-pad">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow">The Makers</span>
+      <h2 class="section-title">Meet the <span class="text-accent">Team</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="team-card">
+          <div class="team-photo tp1"><img src="images/testimonial-member4.jpg"></div>
+          <div class="team-info">
+            <h6>Arjun Nair</h6>
+            <span>Founder & Master</span>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="team-card">
+          <div class="team-photo tp2"><img src="images/testimonial-member1.jpg"></div>
+          <div class="team-info">
+            <h6>Meera Krishnan</h6>
+            <span>Lead Colour Consultant</span>
+           
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="team-card">
+          <div class="team-photo tp3"><img src="images/testimonial-member2.jpg"></div>
+          <div class="team-info">
+            <h6>Senthil Kumar</h6>
+            <span>Structural Restoration</span>
+           
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="team-card">
+          <div class="team-photo tp4"><img src="images/testimonial-member3.jpg"></div>
+          <div class="team-info">
+            <h6>Divya Rajan</h6>
+            <span>Upholstery Specialist</span>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS & PRESS -->
+<section class="section-pad bg-alt">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="section-eyebrow">Recognition</span>
+      <h2 class="section-title">Awards & <span class="text-accent">Press</span></h2>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="award-card"><i class="fas fa-award"></i><div><h6>Best Artisan Studio 2023</h6><span>Chennai Design Week</span></div></div>
+      </div>
+      <div class="col-lg-4 col-md-6">
+        <div class="award-card"><i class="fas fa-newspaper"></i><div><h6>Featured Studio</h6><span>Better Homes India, Nov 2022</span></div></div>
+      </div>
+      <div class="col-lg-4 col-md-6 last-col">
+        <div class="award-card"><i class="fas fa-leaf"></i><div><h6>Green Business Award</h6><span>TN Sustainability Council 2021</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta-section">
+  <div class="container text-center">
+    <h2>Ready to Transform Your Furniture?</h2>
+    <p>Submit your piece and get a free consultation today.</p>
+    <div class="d-flex gap-3 justify-content-center flex-wrap mt-4">
+      <a href="dashboard.html" class="btn btn-primary-custom btn-lg">Submit a Piece</a>
+      <a href="contact.html" class="btn btn-outline-custom btn-lg">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <a href="index.html"><img src="images/refinish.png" alt="ReGrain" class="footer-logo"/></a>
+        <p class="footer-desc mt-3">Artisan furniture refinishing studio. Breathing new life into beloved pieces since 2012.</p>
+        <div class="social-links mt-3">
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-heading">Pages</h6>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-2 col-6">
+        <h6 class="footer-heading">Client</h6>
+        <ul class="footer-links">
+          <li><a href="login.html">Login</a></li>
+          <li><a href="register.html">Register</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="#">Details</a></li>
+          <li><a href="#">Home2</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h6 class="footer-heading">Newsletter</h6>
+        <p class="footer-desc">Get before-after inspirations in your inbox.</p>
+        <div class="newsletter-form d-flex gap-2 mt-2">
+          <input type="email" class="form-control custom-input" placeholder="Your email"/>
+          <button class="btn btn-primary-custom px-3">Go</button>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 ReGrain Studio. All rights reserved.</span>
+      <span>Crafted with ♥ in Chennai</span>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top-btn" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="main.js"></script>
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        document.querySelectorAll('.big-num').forEach(el => {
+          const accent = el.querySelector('.text-accent');
+          const suffix = accent ? accent.textContent : '';
+          const target = parseInt(el.textContent.replace(/[^0-9]/g, ''));
+
+          let start = 0;
+          const duration = 2000;
+          const step = 16;
+          const increment = target / (duration / step);
+
+          const timer = setInterval(() => {
+            start += increment;
+            if (start >= target) {
+              start = target;
+              clearInterval(timer);
+            }
+            // number update, accent span restore
+            el.textContent = Math.floor(start);
+            if (accent) {
+              accent.textContent = suffix;
+              el.appendChild(accent);
+            }
+          }, step);
+        });
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  const band = document.querySelector('.numbers-band');
+  if (band) observer.observe(band);
+</script>
+</body>
+</html>
