@@ -323,3 +323,31 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+// Mobile dropdown fix
+document.querySelectorAll('.navbar-nav .dropdown-toggle').forEach(function(toggle) {
+  toggle.addEventListener('click', function(e) {
+    if (window.innerWidth <= 991) {
+      e.preventDefault();
+      e.stopPropagation();
+      const dropdownMenu = this.nextElementSibling;
+      const isOpen = dropdownMenu.classList.contains('show');
+      // Close all open dropdowns first
+      document.querySelectorAll('.navbar-nav .dropdown-menu.show').forEach(function(menu) {
+        menu.classList.remove('show');
+      });
+      // Toggle current
+      if (!isOpen) {
+        dropdownMenu.classList.add('show');
+      }
+    }
+  });
+});
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+  if (!e.target.closest('.nav-item.dropdown')) {
+    document.querySelectorAll('.navbar-nav .dropdown-menu.show').forEach(function(menu) {
+      menu.classList.remove('show');
+    });
+  }
+});
