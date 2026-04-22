@@ -308,5 +308,27 @@
 <button class="scroll-top-btn" id="scrollTopBtn"><i class="fas fa-arrow-up"></i></button>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="main.js"></script>
+  <script type="text/javascript">
+  document.querySelectorAll('.faq-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const body = btn.nextElementSibling;
+    const isOpen = body.classList.contains('open');
+
+    // Close all
+    document.querySelectorAll('.faq-btn').forEach(b => {
+      b.dataset.open = 'false';
+      b.nextElementSibling.classList.remove('open');
+      b.querySelector('i').style.transform = 'rotate(0deg)';
+    });
+
+    // Open clicked
+    if (!isOpen) {
+      btn.dataset.open = 'true';
+      body.classList.add('open');
+      btn.querySelector('i').style.transform = 'rotate(45deg)';
+    }
+  });
+});
+</script>
 </body>
 </html>
