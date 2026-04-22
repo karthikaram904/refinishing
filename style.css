@@ -2362,3 +2362,26 @@ body.light-mode .hero-section .hero-title {
 html, body {
     overflow-x: hidden;
 }
+/* Mobile Dropdown Fix */
+@media (max-width: 991px) {
+  .navbar-nav .dropdown-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    padding-left: 15px;
+  }
+
+  .navbar-nav .dropdown-menu.show {
+    display: block !important;
+  }
+
+  .navbar-nav .dropdown-item {
+    color: #ccc;
+    padding: 8px 12px;
+  }
+
+  .navbar-nav .dropdown-item:hover {
+    color: #fff;
+    background: transparent;
+  }
+}
