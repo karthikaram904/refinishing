@@ -1913,10 +1913,11 @@ body.light-mode .contact-info-card { background: #fff; }
   .about2-img-main { height: 320px; }
   .about2-year-badge { right: 10px; }
   .about2-img-accent { display: none; }
-}
-.about-page-sec .section-eyebrow {
+   .about-page-sec .section-eyebrow {
   margin-top: 230px;
 }
+}
+
 .story-img-main img
 {
   object-fit: cover;
