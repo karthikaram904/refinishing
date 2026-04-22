@@ -626,6 +626,9 @@ background: transparent;
                           .pcf-before, .pcf-after {
     min-height: 460px !important;
   }
+                           .col-lg-6.hero-content {
+  margin-top: 30px;
+}
                            .dash-topbar-title {
   font-size: 0.78rem !important;
 }
