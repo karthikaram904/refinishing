@@ -1393,7 +1393,7 @@ body.light-mode .condition-chip { background: var(--dark-bg2); border-color: var
 
 /* Table */
 body.light-mode .dash-table tbody tr { background: #fff; }
-body.light-mode .dash-table thead th { color: var(--text-dim); background: transparent; }
+body.light-mode .dash-table thead th { color: var(--text-dim) !important; background: transparent; }
 body.light-mode .dash-table tbody td { border-color: var(--dark-border); }
 
 /* Sections bg */
@@ -1428,6 +1428,10 @@ body.light-mode .sidebar-link.active { background: rgba(200,150,90,0.10); color:
 body.light-mode .dash-notif { background: #fff; border-color: var(--dark-border); }
 body.light-mode .upload-zone { border-color: var(--dark-border); }
 body.light-mode .msg-item.unread { background: rgba(200,150,90,0.05); }
+body.light-mode .sidebar-link:hover .sidebar-badge,body.light-mode .sidebar-link.active .sidebar-badge
+{
+   color:#000 !important;
+}
 
 /* Misc */
 body.light-mode .pricing-toggle { background: var(--dark-bg2); border-color: var(--dark-border); }
