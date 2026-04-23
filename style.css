@@ -74,6 +74,7 @@ nav-item active a
 body.light-mode .ba-panel span,body.light-mode .portfolio-ba span {
   color: #fff !important;
 }
+ 
 body.light-mode .nav-logo,body.light-mode .sidebar-logo img, body.light-mode .footer-logo,body.light-mode .auth-logo {
   filter: invert(58%) sepia(45%) saturate(600%) hue-rotate(5deg) brightness(90%) contrast(90%);
 }
@@ -2245,6 +2246,9 @@ body.light-mode .pw-eye-btn { color: var(--text-dim); }
   .col-md-6, .col-md-4 {
     flex: 0 0 100%;
     max-width: 100%;
+  }
+    body.light-mode .navbar-collapse {
+    background: #fff;
   }
    
 
