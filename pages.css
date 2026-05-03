@@ -691,3 +691,7 @@
   position: relative;
   z-index: 2;
 }
+.navbar-nav .nav-link:hover, .nav-item.active a {
+  color: var(--accent) !important;
+  background: rgba(200,150,90,0.08);
+}
