@@ -222,7 +222,7 @@
   justify-content: center;
 }
 .ps-item {
-  flex: 1; min-width: 200px; max-width: 240px;
+  flex: 1; min-width: 240px; max-width: 280px;
   text-align: center; padding: 1rem;
 }
 .ps-icon { width: 56px; height: 56px; background: rgba(200,150,90,0.12); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--accent); margin: 0 auto 0.5rem; }
@@ -287,7 +287,7 @@
   background: linear-gradient(135deg, #1a1a2e, #2d4a8c);
   position: relative; display: flex; align-items: flex-end; justify-content: flex-end; padding: 16px;
 }
-.pcf-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; background: rgba(0,0,0,0.6); padding: 3px 10px; border-radius: 4px; }
+.pcf-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; background: rgba(0,0,0,0.82); color: #fff; padding: 3px 10px; border-radius: 4px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
 .pcf-divider {
   width: 48px; flex-shrink: 0;
   background: var(--dark-bg);
@@ -298,15 +298,15 @@
 }
 .pcf-overlay {
   position: absolute; bottom: 0; left: 0; right: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
+  background: linear-gradient(to top, rgba(0,0,0,0.93) 0%, rgba(0,0,0,0.62) 50%, rgba(0,0,0,0.18) 100%);
   padding: 2rem;
   pointer-events: none;
 }
 .pcf-info { max-width: 500px; }
 .pcf-tag { display: inline-block; background: var(--accent); color: #000; font-size: 0.72rem; font-weight: 700; padding: 3px 10px; border-radius: 20px; margin-bottom: 0.5rem; }
-.pcf-info h3 { font-size: 1.8rem; margin-bottom: 0.3rem; }
-.pcf-info p { font-size: 1rem; color: rgba(240,237,232,0.8); margin-bottom: 0.5rem; }
-.pcf-meta { display: flex; gap: 1.2rem; font-size: 1rem; color: var(--text-muted); }
+.pcf-info h3 { font-size: 1.8rem; margin-bottom: 0.3rem; color: #fff; text-shadow: 0 1px 6px rgba(0,0,0,0.7); }
+.pcf-info p { font-size: 1rem; color: rgba(255,255,255,0.9); margin-bottom: 0.5rem; }
+.pcf-meta { display: flex; gap: 1.2rem; font-size: 1rem; color: rgba(255,255,255,0.72); }
 .pcf-meta i { color: var(--accent); margin-right: 0.3rem; }
 
 /* Regular portfolio card with full BA */
@@ -322,7 +322,7 @@
 .pcf2-imgs { display: flex; height: 200px; }
 .pcf2-before { flex: 1; background: linear-gradient(135deg, #1f1208, #2d1a0a); position: relative; display: flex; align-items: flex-end; padding: 8px; border-right: 1px solid rgba(255,255,255,0.04); }
 .pcf2-after { flex: 1; position: relative; display: flex; align-items: flex-end; padding: 8px; }
-.pcf2-before span, .pcf2-after span { font-size: 0.65rem; font-weight: 700; background: rgba(0,0,0,0.55); padding: 2px 7px; border-radius: 3px; letter-spacing: 0.08em; }
+.pcf2-before span, .pcf2-after span { font-size: 0.65rem; font-weight: 700; background: rgba(0,0,0,0.82); color: #fff; padding: 2px 7px; border-radius: 3px; letter-spacing: 0.08em; text-shadow: 0 1px 2px rgba(0,0,0,0.5); }
 .pcf2-after.g1 { background: linear-gradient(135deg, #2d1a2e, #6d2d7a); }
 .pcf2-after.g2 { background: linear-gradient(135deg, #1a2f1a, #4a8c4a); }
 .pcf2-after.g3 { background: linear-gradient(135deg, #1a2a1a, #2D6A4F); }
