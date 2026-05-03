@@ -2412,3 +2412,6 @@ html, body {
 .stat-item {
   width: 23%;
 }
+body.light-mode .portfolio-item .pcf2-imgs span {
+  color: #fff !important;
+}
