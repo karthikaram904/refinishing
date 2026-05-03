@@ -325,18 +325,26 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // Mobile dropdown fix
 document.querySelectorAll('.navbar-nav .dropdown-toggle').forEach(function(toggle) {
+  // Capture state before Bootstrap's click handler fires and mutates the DOM
+  var preClickOpen = false;
+  toggle.addEventListener('mousedown', function() {
+    preClickOpen = toggle.nextElementSibling.classList.contains('show');
+  });
+  toggle.addEventListener('touchstart', function() {
+    preClickOpen = toggle.nextElementSibling.classList.contains('show');
+  }, { passive: true });
+
   toggle.addEventListener('click', function(e) {
     if (window.innerWidth < 1024) {
       e.preventDefault();
       e.stopPropagation();
-      const dropdownMenu = this.nextElementSibling;
-      const isOpen = dropdownMenu.classList.contains('show');
-      // Close all open dropdowns first
+      var dropdownMenu = this.nextElementSibling;
+      // Close all open dropdowns (including any Bootstrap opened in this click)
       document.querySelectorAll('.navbar-nav .dropdown-menu.show').forEach(function(menu) {
         menu.classList.remove('show');
       });
-      // Toggle current
-      if (!isOpen) {
+      // Use pre-click state so Bootstrap's mutation doesn't fool our toggle
+      if (!preClickOpen) {
         dropdownMenu.classList.add('show');
       }
     }
